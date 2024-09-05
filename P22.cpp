@@ -4,30 +4,31 @@
 using namespace std;
 
 class Solution {
-    vector<string> genRecurse(string curr, int remO, int remC) {
+    int n;
+    vector<string> res;
+
+    void genRecurse(string curr, int open, int close) {
         // at any point # opening brackets >= # closing brackets
-        if (remC == 0) {
-            return vector<string>{curr};
+        if (curr.size() == 2 * n) {
+            res.push_back(curr);
+            return;
         }
 
-        if (remO == remC) {
-            return genRecurse(curr + '(', remO - 1, remC);
+        if (open < n) {
+            genRecurse(curr + '(', open + 1, close);
         }
 
-        if (remO == 0) {
-            return vector<string>{curr + string(remC, ')')};
+        if (close < open) {
+            genRecurse(curr + ')', open, close + 1);
         }
-
-        vector<string> branch1 = genRecurse(curr + '(', remO - 1, remC);
-        vector<string> branch2 = genRecurse(curr + ')', remO, remC - 1);
-        branch1.insert(branch1.end(), branch2.begin(), branch2.end());
-
-        return branch1;
     }
 
    public:
     vector<string> generateParenthesis(int n) {
-        return genRecurse("", n, n);
+        res = {};
+        this->n = n;
+        genRecurse("", 0, 0);
+        return res;
     }
 };
 
