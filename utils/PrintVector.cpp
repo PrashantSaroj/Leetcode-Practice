@@ -8,3 +8,11 @@ void printVector(vector<T> v) {
     }
     cout << endl;
 }
+
+template <typename T>
+void printVecOfVector(vector<vector<T>> v) {
+    for (vector<T> &t : v) {
+        printVector(t);
+    }
+    cout << endl;
+}
