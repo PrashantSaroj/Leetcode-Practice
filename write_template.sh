@@ -19,4 +19,4 @@ int main() {
 }
 EOL
 
-echo "Template written to $filename"
+code $filename
