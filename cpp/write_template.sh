@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 # Store the filename from the argument
-filename="$1"
+filename=P"$1".cpp
 
 # Write the C++ template to the specified file
 cat <<EOL > "$filename"
