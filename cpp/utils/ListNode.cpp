@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+using namespace std;
 
 struct ListNode {
     int val;
@@ -14,4 +16,19 @@ void printList(ListNode* head) {
         head = head->next;
     }
     std::cout << std::endl;
+}
+
+ListNode* constructList(vector<int> nums) {
+    ListNode *head = nullptr, *it = nullptr;
+    int N = nums.size();
+    for (int i = 0; i < N; i++) {
+        if (i == 0) {
+            head = new ListNode(nums[i]);
+            it = head;
+        } else {
+            it->next = new ListNode(nums[i]);
+            it = it->next;
+        }
+    }
+    return head;
 }
