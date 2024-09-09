@@ -22,7 +22,6 @@ class Solution {
         coinHelper(curr, i, target - coins[i]);
         curr.pop_back();
 
-        vector<vector<int>> noUseIth;
         if (i + 1 < coins.size()) {
             coinHelper(curr, i + 1, target);
         }
