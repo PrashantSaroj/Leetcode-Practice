@@ -32,3 +32,13 @@ ListNode* constructList(vector<int> nums) {
     }
     return head;
 }
+
+int getLength(ListNode* head) {
+    ListNode* it = head;
+    int len = 0;
+    while (it) {
+        len++;
+        it = it->next;
+    }
+    return len;
+}
