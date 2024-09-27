@@ -10,7 +10,7 @@ class MyCalendar {
         if (i1.first > i2.first) {
             return intersect(i2, i1);
         }
-        return !(i1.second <= i2.first);
+        return i1.second > i2.first;
     }
 
    public:
