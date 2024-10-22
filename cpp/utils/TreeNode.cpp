@@ -1,4 +1,5 @@
-struct TreeNode {
+struct TreeNode
+{
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -7,24 +8,19 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-TreeNode *getSampleRoot() {
+TreeNode *getSampleRoot()
+{
     return new TreeNode(
-        4,
+        5,
         new TreeNode(
-            4,
-            nullptr,
+            8,
             new TreeNode(
                 2,
-                new TreeNode(1),
-                nullptr)),
+                new TreeNode(4),
+                new TreeNode(6)),
+            new TreeNode(1)),
         new TreeNode(
-            4,
-            new TreeNode(
-                2,
-                new TreeNode(6),
-                new TreeNode(
-                    8,
-                    new TreeNode(1),
-                    new TreeNode(3))),
-            nullptr));
+            9,
+            new TreeNode(3),
+            new TreeNode(7)));
 }
