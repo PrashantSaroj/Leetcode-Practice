@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+
 struct TreeNode
 {
     int val;
@@ -13,14 +15,21 @@ TreeNode *getSampleRoot()
     return new TreeNode(
         5,
         new TreeNode(
-            8,
-            new TreeNode(
-                2,
-                new TreeNode(4),
-                new TreeNode(6)),
-            new TreeNode(1)),
+            4,
+            new TreeNode(1),
+            new TreeNode(10)),
         new TreeNode(
             9,
-            new TreeNode(3),
+            nullptr,
             new TreeNode(7)));
+}
+
+void printTree(TreeNode *root)
+{
+    if (!root)
+        return;
+
+    std::cout << root->val << " ";
+    printTree(root->left);
+    printTree(root->right);
 }
