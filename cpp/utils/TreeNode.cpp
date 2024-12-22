@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 
-struct TreeNode
-{
+struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -10,24 +9,20 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-TreeNode *getSampleRoot()
-{
+TreeNode *getSampleRoot() {
     return new TreeNode(
-        5,
+        2,
         new TreeNode(
-            8,
-            new TreeNode(2,
-                         new TreeNode(4),
-                         new TreeNode(6)),
-            new TreeNode(1)),
+            3,
+            new TreeNode(8),
+            new TreeNode(13)),
         new TreeNode(
-            9,
-            new TreeNode(3),
-            new TreeNode(7)));
+            5,
+            new TreeNode(21),
+            new TreeNode(34)));
 }
 
-void printTree(TreeNode *root)
-{
+void printTree(TreeNode *root) {
     if (!root)
         return;
 
