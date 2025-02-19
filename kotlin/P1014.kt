@@ -1,7 +1,7 @@
 import kotlin.math.max
 
 
-class Solution {
+class Solution1014 {
     fun maxScoreSightseeingPair(values: IntArray): Int {
         var res = values[values.size - 1] + values[values.size - 2] - 1
         var cur = values[values.size - 1]
@@ -16,7 +16,7 @@ class Solution {
 fun main() {
     val values1 = intArrayOf(8, 1, 5, 2, 6)
     val values2 = intArrayOf(1, 2)
-    val sol = Solution()
+    val sol = Solution1014()
     println(sol.maxScoreSightseeingPair(values1))
     println(sol.maxScoreSightseeingPair(values2))
 }

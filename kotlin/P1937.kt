@@ -1,7 +1,7 @@
 import kotlin.math.max
 
 
-class Solution {
+class Solution1937 {
     private fun leftSideMax(points: LongArray, n: Int): LongArray {
         val leftMax = LongArray(n)
         leftMax[0] = points[0]
@@ -52,7 +52,7 @@ fun main() {
         intArrayOf(2, 3),
         intArrayOf(4, 2),
     )
-    val sol = Solution()
+    val sol = Solution1937()
     println(sol.maxPoints(points1))
     println(sol.maxPoints(points2))
 }

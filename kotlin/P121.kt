@@ -1,4 +1,4 @@
-class Solution {
+class Solution121 {
     fun maxProfit(prices: IntArray): Int {
         val maxPrices = IntArray(prices.size)
         maxPrices[prices.size - 1] = prices[prices.size - 1]
@@ -24,7 +24,7 @@ class Solution {
 fun main() {
     val prices1 = intArrayOf(7, 1, 5, 3, 6, 4)
     val prices2 = intArrayOf(7, 6, 4, 3, 1)
-    val sol = Solution()
+    val sol = Solution121()
     println(sol.maxProfit(prices1))
     println(sol.maxProfit(prices2))
 }
