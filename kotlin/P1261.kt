@@ -1,8 +1,3 @@
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
-
 class FindElements(root: TreeNode?) {
     private val valuesSet = mutableSetOf<Int>()
 
