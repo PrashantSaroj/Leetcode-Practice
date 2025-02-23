@@ -10,3 +10,11 @@ fun preOrder(root: TreeNode?) {
         preOrder(it.right)
     }
 }
+
+fun inOrder(root: TreeNode?) {
+    root?.let {
+        inOrder(it.left)
+        print("${root.`val`} ")
+        inOrder(it.right)
+    }
+}
