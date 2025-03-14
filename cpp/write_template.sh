@@ -15,7 +15,8 @@ cat <<EOL > "$filename"
 using namespace std;
 
 int main() {
-    return 0;
+    vector<> testCases = {
+    };
 }
 EOL
 
