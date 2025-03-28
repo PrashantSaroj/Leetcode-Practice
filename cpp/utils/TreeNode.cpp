@@ -11,15 +11,15 @@ struct TreeNode {
 
 TreeNode *getSampleRoot() {
     return new TreeNode(
-        2,
+        3,
         new TreeNode(
             4,
-            new TreeNode(7),
-            new TreeNode(6)),
+            new TreeNode(1),
+            new TreeNode(3)),
         new TreeNode(
-            3,
-            new TreeNode(8, new TreeNode(9), nullptr),
-            new TreeNode(5, new TreeNode(10), nullptr)));
+            5,
+            nullptr,
+            new TreeNode(1)));
 }
 
 void printTree(TreeNode *root) {
