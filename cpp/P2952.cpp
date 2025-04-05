@@ -6,7 +6,7 @@ class Solution {
     int minimumAddedCoins(vector<int>& coins, int target) {
         sort(coins.begin(), coins.end());
         int addedCoins = 0, obtain = 0, i = 0;
-        while (obtain <= target) {
+        while (obtain < target) {
             if (i < coins.size() && coins[i] <= obtain + 1) {
                 obtain += coins[i++];
             } else {
